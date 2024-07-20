@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session Storage</title>
+</head>
+<body>
+    <h2>Available Products</h2>
+    <ul id="available-products"></ul>
+    <h2>Your cart;</h2>
+    <div id="cart"></div>
+
+    <script>
+
+        if (typeof(Storage) === "undefined") {
+            alert("Sorry, your browser does not support Web Storage. Try again with a better naem");
+        } else {
+            createStore();
+            displayCart();
+        }
+
+        const availableItems = ["shampoo", "Soacp", "Sponge", "Water"];
+    </script>
     <style>
         body {
             font-family: 'Times New Roman', arial, sans-serif, serif sans-serif;
